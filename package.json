@@ -1,0 +1,39 @@
+{
+  "name": "snaputil",
+  "version": "1.0.0",
+  "description": "A modern TypeScript utility library delivering modularity which you can increase work efficiency",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaoyue0/SnapUtil.git"
+  },
+  "keywords": [
+    "typescript",
+    "Utility",
+    "Types",
+    "tool",
+    "util",
+    "ts",
+    "TS",
+    "TypeScript"
+  ],
+  "author": "chaoyue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaoyue0/SnapUtil/issues"
+  },
+  "homepage": "https://github.com/chaoyue0/SnapUtil#readme",
+  "devDependencies": {
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9",
+    "vitest": "^0.34.3",
+    "vue-tsc": "^0.40.7",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1"
+  }
+}
