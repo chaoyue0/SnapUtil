@@ -36,3 +36,19 @@ export const trimPlus = (str: string, char?: string) => {
     const end = charEndIndex(str, char) + 1;
     return str.slice(start, end);
 }
+
+export const trimStartPlus = (str: string, char?: string) => {
+    if (str && char === undefined) {
+        return str.trimStart();
+    }
+    const start = charStartIndex(str, char);
+    return str.slice(start);
+}
+
+export const trimEndPlus = (str: string, char?: string) => {
+    if (str && char === undefined) {
+        return str.trimEnd();
+    }
+    const end = charEndIndex(str, char);
+    return str.slice(0, end);
+}

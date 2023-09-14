@@ -38,3 +38,16 @@ export const isOverZero = (val: unknown): val is string | number => {
   }
   return false;
 };
+
+export const clamp = (number: number | string,lower: number | string,upper: number | string): number => {
+  number = +number;
+  lower = +lower;
+  upper = +upper;
+  lower = lower === lower ? lower : 0;
+  upper = upper === upper ? upper : 0;
+  if (number === number) {
+    number = number <= upper ? number : upper;
+    number = number >= lower ? number : lower;
+  }
+  return number;
+}
