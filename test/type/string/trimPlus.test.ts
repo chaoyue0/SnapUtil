@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import {trimPlus} from "../../../libs/type/string";
+import trimPlus from "../../../libs/type/string/trimPlus";
 
 // trimPlus
 test('trimPlus-start', () => {
