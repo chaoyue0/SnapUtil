@@ -1,4 +1,4 @@
-import {MyPromise, Status} from "./promise";
+const {MyPromise, FULFILLED, REJECTED, PENDING} = require("./promise");
 
 MyPromise.prototype.then = function (onFulfilled, onRejected) {
     onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value;
@@ -6,7 +6,7 @@ MyPromise.prototype.then = function (onFulfilled, onRejected) {
     let self = this;
 
     let promise2 =  new MyPromise((resolve, reject) => {
-        if (self.state == Status.FULFILLED) {
+        if (self.state === FULFILLED) {
             setTimeout(() => {
                 try {
                     let x = onFulfilled(self.value);
@@ -15,7 +15,7 @@ MyPromise.prototype.then = function (onFulfilled, onRejected) {
                     reject(e);
                 }
             });
-        } else if (self.state == Status.REJECTED) {
+        } else if (self.state === REJECTED) {
             setTimeout(() => {
                 try {
                     let x = onRejected(self.value);
@@ -24,7 +24,7 @@ MyPromise.prototype.then = function (onFulfilled, onRejected) {
                     reject(e);
                 }
             });
-        } else if (self.state == Status.PENDING) {
+        } else if (self.state === PENDING) {
             self.resolvedCallbacks.push(() => {
                 setTimeout(() => {
                     try {

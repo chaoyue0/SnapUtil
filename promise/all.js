@@ -1,4 +1,4 @@
-import {MyPromise} from "./promise";
+const {MyPromise} = require("./promise");
 
 MyPromise.prototype.all = function (promises) {
     return new MyPromise((resolve, reject) => {
